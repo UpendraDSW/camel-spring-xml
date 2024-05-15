@@ -11,7 +11,9 @@
 
     <!-- Define HttpComponent bean with connectionTimeToLive property -->
     <bean id="http" class="org.apache.camel.component.http.HttpComponent">
-        <property name="connectionTimeToLive" value="5544"/>
+        <property name="connectionTimeToLive" value="1000"/>
+<!--        <property name="connectionsPerRoute" value = "1"/>-->
+<!--        <property name="maxTotalConnections" value = "1"/>-->
     </bean>
 
 </beans>

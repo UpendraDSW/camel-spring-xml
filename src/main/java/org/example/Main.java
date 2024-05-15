@@ -15,6 +15,15 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) throws Exception {
+        int count = 0;
+        while (count < 25) {
+            callAPI();
+            count++;
+        }
+
+    }
+
+    private static void callAPI() {
 //        ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("camel-context.xml");
         CamelContext context = appContext.getBean(CamelContext.class);
